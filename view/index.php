@@ -19,8 +19,6 @@
             include_once('top.php');
         ?>
 
-
-
         <form id="form-sign-up" method="post" action="../package/ctrl/CtrlUser.php" enctype="multipart/form-data">
             <div class="box-img">
                 <img src="<?php echo $imageSrc; ?>" width="150" height="150">
@@ -54,19 +52,19 @@
             </button>
         </form>
 
-
-
         <?php
             include_once('copyright.php');
         ?>
 
-
-
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script type="text/javascript">
 
-            var ua = navigator.userAgent.toLowerCase();
-            var isAndroid = ua.indexOf("android") > -1;
+            var isAndroid = false;
+            try{
+                isAndroid = Android != undefined
+            }
+            catch(e){}
+
 
             /* BOX-IMG BOTÃO QUE RETORNA A IMAGEM PADRÃO - REMOVER IMAGEM CARREGADA */
             $('div.box-img a.bt-remove').click(function( e ){

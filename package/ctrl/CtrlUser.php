@@ -2,7 +2,6 @@
     include_once('../domain/Image.php');
     include_once('../domain/User.php');
 
-
     /* VERIFICANDO SE OS DADOS VIERAM DO FORMULÁRIO DE CADASTRO DE USUÁRIO */
     if( strcasecmp($_POST['in-method'], 'form-sign-up') == 0 ){
 
